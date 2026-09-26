@@ -39,13 +39,13 @@ export default function LoginPage({ onLogin }) {
   return (
     <main className="auth-page">
       <div className="auth-art" aria-hidden="true">
-        <div className="auth-art-top"><span className="brand-mark"><MapPinned size={19} /></span><span>fieldnotes<span className="brand-period">.</span></span></div>
+        <div className="auth-art-top"><span className="brand-mark"><MapPinned size={19} /></span><span>Leads by Codie<span className="brand-period">.</span></span></div>
         <div className="auth-art-copy"><span>LOCAL BUSINESS INTELLIGENCE</span><h1>Know your<br />next best lead.</h1><p>Turn local discovery into thoughtful outreach, all in one calm workspace.</p></div>
         <div className="auth-art-grid"><div><span>01</span><strong>Discover</strong><small>Find the right businesses</small></div><div><span>02</span><strong>Understand</strong><small>See the opportunity</small></div><div><span>03</span><strong>Connect</strong><small>Keep every follow-up moving</small></div></div>
         <div className="auth-art-stamp"><MapPin size={15} /> BUILT FOR YOUR NEXT MILE</div>
       </div>
       <section className="auth-panel">
-        <div className="auth-mobile-brand"><span className="brand-mark"><MapPinned size={19} /></span><strong>fieldnotes<span className="brand-period">.</span></strong></div>
+        <div className="auth-mobile-brand"><span className="brand-mark"><MapPinned size={19} /></span><strong>Codie<span className="brand-period">.</span></strong></div>
         <div className="auth-card">
           <span className="auth-kicker"><LockKeyhole size={14} /> PRIVATE WORKSPACE</span>
           <h2>{mode === 'login' ? 'Welcome back' : 'Create your workspace'}</h2>
@@ -60,7 +60,7 @@ export default function LoginPage({ onLogin }) {
           <div className="auth-switch">{mode === 'login' ? 'New to Fieldnotes?' : 'Already have an account?'} <button type="button" onClick={() => { setMode(mode === 'login' ? 'register' : 'login'); setError('') }}>{mode === 'login' ? 'Create an account' : 'Sign in'}</button></div>
           <div className="auth-security"><ShieldCheck size={15} /><span>Password hashes and sign-in sessions are stored in a separate, private Google spreadsheet.</span></div>
         </div>
-        <footer className="auth-footer">FIELDNOTES <span>·</span> YOUR LEADS, KEPT IN ONE PLACE</footer>
+        <footer className="auth-footer">Leads by Codie <span>·</span> YOUR LEADS, KEPT IN ONE PLACE</footer>
       </section>
     </main>
   )

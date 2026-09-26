@@ -220,11 +220,11 @@ function App() {
       <aside className="sidebar">
         <a className="brand" href="#top" aria-label="Fieldnotes home">
           <span className="brand-mark"><MapPinned size={19} strokeWidth={2.1} /></span>
-          <span>fieldnotes<span className="brand-period">.</span></span>
+          <span>Leads By Codie<span className="brand-period">.</span></span>
         </a>
         <div className="workspace-switch">
-          <span className="workspace-avatar">S</span>
-          <span className="workspace-name">Studio North<small>Lead workspace</small></span>
+          <span className="workspace-avatar">C</span>
+          <span className="workspace-name">CODIE entr.<small>Lead workspace</small></span>
           <ChevronDown size={15} />
         </div>
         <p className="nav-label">WORKSPACE</p>
@@ -314,7 +314,7 @@ function App() {
             <div className="map-heading"><div><div className="eyebrow"><span className="eyebrow-dot" /> GEOGRAPHIC VIEW</div><h2>Lead locations</h2><p>Select a business in the table or a marker to see its location.</p></div><span className="map-data-source"><MapPin size={14} /> Google Places coordinates</span></div>
             <LeadMap leads={filteredLeads} selectedLead={selectedLead} onSelect={setSelectedLead} />
           </section>
-          <footer className="page-footer"><span>FIELDNOTES <span>·</span> LOCAL LEAD WORKSPACE</span><span>Search the web, organize, grow.</span></footer>
+          <footer className="page-footer"><span>Leads Gen by Codies <span>·</span> LOCAL LEAD WORKSPACE</span><span>Search the web, organize, grow.</span></footer>
         </div>
       </main>
 
