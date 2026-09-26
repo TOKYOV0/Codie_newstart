@@ -318,9 +318,15 @@ app.get(/.*/, async (_request, response) => {
   }
 })
 
-app.listen(port, () => {
-  console.log(`Fieldnotes API listening on http://localhost:${port}`)
-  if (!authScriptUrl) console.warn('AUTH_SCRIPT_URL is not set; sign-in, registration, and Google Sheets sync are disabled until it is configured in .env.')
-  if (!placesApiKey) console.warn('GOOGLE_MAPS_API_KEY is not set; Google Maps discovery is disabled.')
-  if (!webSearchApiKey || !webSearchEngineId) console.warn('GOOGLE_CSE_API_KEY/GOOGLE_CSE_ID are not set; Internet discovery is disabled.')
-})
+// Export the Express app so Vercel can run it as a serverless Node function.
+// The listener is only needed for local development.
+export default app
+
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`Fieldnotes API listening on http://localhost:${port}`)
+    if (!authScriptUrl) console.warn('AUTH_SCRIPT_URL is not set; sign-in, registration, and Google Sheets sync are disabled until it is configured in .env.')
+    if (!placesApiKey) console.warn('GOOGLE_MAPS_API_KEY is not set; Google Maps discovery is disabled.')
+    if (!webSearchApiKey || !webSearchEngineId) console.warn('GOOGLE_CSE_API_KEY/GOOGLE_CSE_ID are not set; Internet discovery is disabled.')
+  })
+}
